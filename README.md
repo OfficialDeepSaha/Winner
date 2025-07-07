@@ -1,4 +1,4 @@
-# ✨ Smart Todo List - AI-Powered Task & Calendar Management
+# ✨ Smart Todo List - AI-Powered Task Management
 
 <div align="center">
   <img src="screenshots/Screenshot%202025-07-07%20191338.png" alt="Smart Todo App Dashboard" width="800">
