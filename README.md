@@ -1,4 +1,8 @@
-# Smart Todo List - AI-Powered Task & Calendar Management
+# ✨ Smart Todo List - AI-Powered Task & Calendar Management
+
+<div align="center">
+  <img src="screenshots/Screenshot%202025-07-07%20191338.png" alt="Smart Todo App Dashboard" width="800">
+</div>
 
 A modern, intelligent task and calendar management application that leverages AI to help you prioritize, organize, and complete your tasks more efficiently while managing your schedule seamlessly.
 
@@ -23,6 +27,51 @@ A modern, intelligent task and calendar management application that leverages AI
 - **Responsive Design**: Works seamlessly on desktop and mobile devices
 - **Dark/Light Theme**: Customizable appearance
 - **Real-time Updates**: Live synchronization across devices
+
+## 📸 Screenshots
+
+<div align="center">
+  <p>
+    <img src="screenshots/Screenshot%202025-07-07%20142131.png" width="280">
+    <img src="screenshots/Screenshot%202025-07-07%20142159.png" width="280">
+    <img src="screenshots/Screenshot%202025-07-07%20142218.png" width="280">
+  </p>
+  <p>
+    <img src="screenshots/Screenshot%202025-07-07%20142242.png" width="280">
+    <img src="screenshots/Screenshot%202025-07-07%20142313.png" width="280">
+    <img src="screenshots/Screenshot%202025-07-07%20142328.png" width="280">
+  </p>
+  <p>
+    <img src="screenshots/Screenshot%202025-07-07%20142340.png" width="280">
+    <img src="screenshots/Screenshot%202025-07-07%20142357.png" width="280">
+    <img src="screenshots/Screenshot%202025-07-07%20142425.png" width="280">
+  </p>
+  <p>
+    <img src="screenshots/Screenshot%202025-07-07%20142439.png" width="280">
+    <img src="screenshots/Screenshot%202025-07-07%20142458.png" width="280">
+    <img src="screenshots/Screenshot%202025-07-07%20142547.png" width="280">
+  </p>
+  <p>
+    <img src="screenshots/Screenshot%202025-07-07%20142618.png" width="280">
+    <img src="screenshots/Screenshot%202025-07-07%20191241.png" width="280">
+    <img src="screenshots/Screenshot%202025-07-07%20191338.png" width="280">
+  </p>
+  <p>
+    <img src="screenshots/Screenshot%202025-07-07%20191357.png" width="280">
+    <img src="screenshots/Screenshot%202025-07-07%20204817.png" width="280">
+    <img src="screenshots/Screenshot%202025-07-07%20205803.png" width="280">
+  </p>
+  <p>
+    <img src="screenshots/Screenshot%202025-07-07%20205817.png" width="280">
+    <img src="screenshots/Screenshot%202025-07-07%20211334.png" width="280">
+    <img src="screenshots/Screenshot%202025-07-07%20212302.png" width="280">
+  </p>
+  <p>
+    <img src="screenshots/Screenshot%202025-07-07%20212335.png" width="280">
+    <img src="screenshots/Screenshot%202025-07-07%20212400.png" width="280">
+    <img src="screenshots/Screenshot%202025-07-07%20214514.png" width="280">
+  </p>
+</div>
 
 ## 🏗️ Architecture
 
@@ -334,6 +383,89 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 4. Add tests if applicable
 5. Submit a pull request
 
+## 🤖 Sample Tasks & AI Suggestions
+
+### AI-Generated Task Suggestions
+
+Based on your context inputs, the Smart Todo app can generate intelligent task suggestions:
+
+<div align="center">
+  <img src="screenshots/Screenshot%202025-07-07%20142340.png" alt="AI Task Suggestions" width="700">
+</div>
+
+### Sample AI Interactions
+
+| User Input | AI Response |
+|------------|-------------|
+| "I need to prepare for a presentation next week" | **AI Suggestion:** "Added task 'Prepare presentation slides' with High priority due 3 days before the meeting" |
+| "I'm feeling overwhelmed with work" | **AI Response:** "Analyzing your workload. Recommendation: reschedule 3 low-priority tasks and block 2 hours for focused work tomorrow" |
+| "My project deadline is approaching" | **AI Suggestion:** "Created a task sequence with 4 subtasks to help you meet the project deadline efficiently" |
+| "Need to plan a team meeting" | **AI Response:** "Suggested optimal meeting time based on team availability: Tuesday at 2 PM. Created event with preparation tasks" |
+
+<div align="center">
+  <img src="screenshots/Screenshot%202025-07-07%20142458.png" alt="Context Analysis" width="700">
+</div>
+
+### Workload Optimization
+
+The AI analyzes your task list and provides workload optimization:
+
+<div align="center">
+  <img src="screenshots/Screenshot%202025-07-07%20191338.png" alt="Workload Optimization" width="700">
+</div>
+
+## 📊 API Documentation
+
+### Authentication
+
+All API endpoints require token authentication except for login/register.
+
+```bash
+# Login
+POST /api/auth/login/
+{
+  "username": "your_username",
+  "password": "your_password"
+}
+
+# Response
+{
+  "token": "your-auth-token",
+  "user": {...}
+}
+```
+
+### Core API Endpoints
+
+#### Tasks
+| Endpoint | Method | Description |
+|----------|--------|-------------|
+| `/api/tasks/` | GET | List all tasks with filters (status, priority, category, etc.) |
+| `/api/tasks/` | POST | Create a new task |
+| `/api/tasks/{id}/` | GET | Get task details |
+| `/api/tasks/{id}/` | PUT | Update task |
+| `/api/tasks/{id}/` | DELETE | Delete task |
+| `/api/tasks/bulk_update/` | POST | Perform bulk operations (mark complete, change priority) |
+
+#### Categories
+| Endpoint | Method | Description |
+|----------|--------|-------------|
+| `/api/categories/` | GET | List all categories |
+| `/api/categories/` | POST | Create a new category |
+| `/api/categories/{id}/` | GET | Get category details |
+| `/api/categories/{id}/` | PUT | Update category |
+| `/api/categories/{id}/` | DELETE | Delete category |
+
+#### AI Services
+| Endpoint | Method | Description |
+|----------|--------|-------------|
+| `/api/ai/analyze-context/` | POST | Analyze context for task suggestions |
+| `/api/ai/prioritize-tasks/` | POST | Get AI task prioritization |
+| `/api/ai/suggest-deadline/` | POST | Get deadline suggestions |
+| `/api/ai/workload-analysis/` | GET | Get workload analysis |
+
+For full API documentation, see the [API_DOCUMENTATION.md](./API_DOCUMENTATION.md) file.
+
 ## 📞 Support
 
 For support and questions:
@@ -343,5 +475,13 @@ For support and questions:
 
 ---
 
-**Built with ❤️ using Django, React, and AI**
+<div align="center">
+  <p><strong>Built with ❤️ using Django, React, and AI</strong></p>
+  <p>
+    <a href="https://www.djangoproject.com/"><img src="https://img.shields.io/badge/Django-4.2-%23092E20?style=for-the-badge&logo=django&logoColor=white" alt="Django"></a>
+    <a href="https://reactjs.org/"><img src="https://img.shields.io/badge/React-18-%2361DAFB?style=for-the-badge&logo=react&logoColor=white" alt="React"></a>
+    <a href="https://tailwindcss.com/"><img src="https://img.shields.io/badge/Tailwind-CSS-%2338B2AC?style=for-the-badge&logo=tailwindcss&logoColor=white" alt="Tailwind CSS"></a>
+    <a href="https://cloud.google.com/vertex-ai"><img src="https://img.shields.io/badge/Powered%20by-Google%20AI-%234285F4?style=for-the-badge&logo=google&logoColor=white" alt="Google AI"></a>
+  </p>
+</div>
 
