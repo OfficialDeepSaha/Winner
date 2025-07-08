@@ -403,7 +403,7 @@ Based on your context inputs, the Smart Todo app can generate intelligent task s
 | "Need to plan a team meeting" | **AI Response:** "Suggested optimal meeting time based on team availability: Tuesday at 2 PM. Created event with preparation tasks" |
 
 <div align="center">
-  <img src="screenshots/Screenshot%202025-07-07%20142458.png" alt="Context Analysis" width="700">
+  <img src="screenshots/Screenshot%202025-07-07%20191241.png" alt="Context Analysis" width="700">
 </div>
 
 ### Workload Optimization
