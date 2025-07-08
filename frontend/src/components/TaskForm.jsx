@@ -613,49 +613,7 @@ const TaskForm = () => {
                     
                     {!timeBlockCreated && (
                       <div className="flex items-center gap-2">
-                        {formData.scheduled_start_time && formData.scheduled_end_time && (
-                          <Button 
-                            type="button" 
-                            size="sm" 
-                            variant="outline" 
-                            className="flex items-center gap-1"
-                            onClick={async () => {
-                              try {
-                                // Only create time block if we have valid scheduling data
-                                if (formData.scheduled_start_time && formData.scheduled_end_time) {
-                                  // If we're editing an existing task, we need its ID
-                                  const taskId = isEditing ? id : null;
-                                  
-                                  // Create a time block for this task scheduling
-                                  await createTimeBlock({
-                                    task: taskId, // Will be null for new tasks
-                                    task_title: formData.title, // Use the task title for new tasks
-                                    start_time: formData.scheduled_start_time,
-                                    end_time: formData.scheduled_end_time,
-                                    status: 'scheduled',
-                                    notes: `Created from task: ${formData.title}`,
-                                  });
-                                  
-                                  setTimeBlockCreated(true);
-                                  toast({
-                                    title: "Time Block Created",
-                                    description: "A time block has been added to your calendar."
-                                  });
-                                }
-                              } catch (error) {
-                                console.error('Failed to create time block:', error);
-                                toast({
-                                  title: "Error",
-                                  description: "Failed to create time block.",
-                                  variant: "destructive"
-                                });
-                              }
-                            }}
-                          >
-                            <CalendarClock className="h-4 w-4" />
-                            Create Time Block
-                          </Button>
-                        )}
+                       
                         
                         <Button 
                           type="button" 
